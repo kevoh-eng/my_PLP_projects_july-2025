@@ -1,0 +1,195 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PLP HTML5 Event Registration</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 20px;
+      background-color: lavender;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 15px 0;
+    }
+
+    th, td {
+      border: 1px solid gray;
+      padding: 8px;
+    }
+
+    fieldset {
+      margin-bottom: 20px;
+      padding: 15px;
+      background-color: white;
+      border: 1px solid gray;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 6px;
+      margin-top: 4px;
+      box-sizing: border-box;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    input[type="submit"] {
+      width: auto;
+      padding: 8px 16px;
+      margin-top: 15px;
+      background-color: blue;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: darkblue;
+    }
+
+    footer {
+      margin-top: 40px;
+      font-size: 14px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>PLP Event Registration</h1>
+  <p>This project demonstrates advanced HTML5 features including structured content, media elements, and native form validation.</p>
+
+  <h2>What You’ll Learn</h2>
+  <ul>
+    <li>HTML5 Semantic Elements</li>
+    <li>Working with Lists and Tables</li>
+    <li>Embedding Audio and Video</li>
+    <li>Creating Validated Forms with Native HTML5 Features</li>
+  </ul>
+
+  <h2>Event Schedule</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Time</th>
+        <th>Topic</th>
+        <th>Speaker</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>10:00 AM</td>
+        <td>Introduction to HTML5</td>
+        <td>Kelvin W</td>
+      </tr>
+      <tr>
+        <td>11:30 AM</td>
+        <td>Forms and Validation</td>
+        <td>John D</td>
+      </tr>
+      <tr>
+        <td>2:00 PM</td>
+        <td>Media and Accessibility</td>
+        <td>Emily Wenga</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Watch & Listen</h2>
+  <video controls width="100%">
+    <source src="intro.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+
+  <p>Listen to the audio version:</p>
+  <audio controls>
+    <source src="intro.mp3" type="audio/mpeg" />
+    Your browser does not support the audio element.
+  </audio>
+
+  <h2>Register Now</h2>
+  <form action="#" method="POST" autocomplete="on">
+
+    <fieldset>
+      <legend>Personal Information</legend>
+
+      <label for="fname">First Name *</label>
+      <input type="text" id="fname" name="fname" required minlength="2">
+
+      <label for="lname">Last Name *</label>
+      <input type="text" id="lname" name="lname" required minlength="2">
+
+      <label for="email">Email Address *</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="10-digit number">
+    </fieldset>
+
+    <fieldset>
+      <legend>Account Setup</legend>
+
+      <label for="userid">User ID (readonly example)</label>
+      <input type="text" id="userid" name="userid" value="PLP2025" readonly>
+
+      <label for="username">Create Username *</label>
+      <input type="text" id="username" name="username" required pattern="[A-Za-z0-9_]{5,}" title="At least 5 characters; letters, numbers, and underscores only">
+
+      <label for="password">Create Password *</label>
+      <input type="password" id="password" name="password" required minlength="6">
+
+      <label for="confirm">Confirm Password *</label>
+      <input type="password" id="confirm" name="confirm" required minlength="6">
+    </fieldset>
+
+    <fieldset>
+      <legend>Event Preferences</legend>
+
+      <label for="session">Choose a Session *</label>
+      <select id="session" name="session" required>
+        <option value="">-- Please select --</option>
+        <option value="morning">Morning</option>
+        <option value="afternoon">Afternoon</option>
+      </select>
+
+      <label for="interest">Select Your Interest *</label>
+      <select id="interest" name="interest" required>
+        <option value="">-- Please select --</option>
+        <option value="web">Web Development</option>
+        <option value="mobile">Mobile Development</option>
+        <option value="data">Data Science</option>
+        <option value="ai">Artificial Intelligence</option>
+      </select>
+
+      <label for="comments">Additional Comments</label>
+      <textarea id="comments" name="comments" rows="4" placeholder="Any special requests or notes?"></textarea>
+
+      <label>
+        <input type="checkbox" name="terms" required>
+        I agree to the <a href="#">terms and conditions</a>.
+      </label>
+    </fieldset>
+
+    <input type="submit" value="Register">
+  </form>
+
+  <footer>
+    <p>Created by Kelvin W. | PLP Software Development Module</p>
+    <p>© 2025 - All rights reserved</p>
+  </footer>
+
+</body>
+</html>
